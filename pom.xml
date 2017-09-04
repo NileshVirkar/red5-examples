@@ -15,6 +15,19 @@
         <name>Red5</name>
         <url>https://github.com/Red5</url>
     </organization>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<version>3.0.4</version>
+				<configuration>
+					<xmlOutput>true</xmlOutput>
+					<findbugsXmlOutputDirectory>${project.build.directory}/findbugs/${project.name}</findbugsXmlOutputDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
     <modules>
         <!--
         <module>admin</module>
